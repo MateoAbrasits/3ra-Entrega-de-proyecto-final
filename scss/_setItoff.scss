@@ -1,0 +1,198 @@
+.contSetItOff{
+    .titulo{
+        margin: auto;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(0, 154, 201);
+        margin-bottom: 70px;
+        h1{
+            -webkit-text-stroke: 2px rgb(0, 98, 128);
+            margin: auto;
+            text-align: center;
+            font-size: 35px;
+            color: black;
+            font-family: 'Mochiy Pop P One', sans-serif;
+        }
+    }
+}
+
+@mixin titulos ($Talign:center, $Tftsize:35px, $margin:50px) {
+    text-align: $Talign;
+    font-size: $Tftsize;
+    margin: $margin;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+@mixin parrafos ($Talign:left, $Fsize:25px, $Fweight:bold, $Margin:20px) {
+            text-align: $Talign;
+            font-size: $Fsize;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: $Fweight;
+            margin: $Margin;
+    
+    
+}
+
+.comoBanda{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    div{
+        margin: auto;
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+
+        img{
+            width: 400px;
+        }
+
+        p{
+            @include parrafos
+        }
+
+        
+
+        
+    }
+
+    h2{
+        @include titulos
+    }
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:40px ;
+
+    h2{
+        @include titulos
+    }
+
+    div{
+        margin: auto;
+        width: 1200px;
+        display: flex;
+        flex-direction: row;
+
+        
+
+        img{
+            margin-top: 30px;
+            width: 400px;
+            height: 320px;
+        }
+
+        p{
+            @include parrafos
+        }
+
+        
+        
+    }
+
+    
+}
+
+.influencias{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:40px ;
+
+    h2{
+        @include titulos
+    }
+
+    div{
+        margin: auto;
+        width: 1000px;
+        display: flex;
+        flex-direction: row;
+        p{
+            @include parrafos
+        }
+        img{
+            width: 400px;
+        }
+    }
+}
+
+footer{
+
+    .titulofooter{
+
+        h3{
+            color: white;
+            background-color: transparent;
+        }
+    }
+    .contLogos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            margin: 10px;
+        }
+
+       
+    
+    }
+
+}
+   
+@media screen and (max-width: 480px) {
+    .comoBanda{
+       
+        div{
+            margin: auto;
+            width: 480px;
+            display: flex;
+            flex-direction: column;
+    
+            img{
+                margin: auto;
+            }   
+        }
+    }
+
+    .historia{    
+        div{
+            width: 480px;
+            flex-direction: column;
+    
+            
+    
+            img{
+                margin: auto;
+            }
+    
+            p{
+                margin-top: 30px;
+            }
+    }
+
+}
+
+
+.influencias{
+   
+ div{
+        margin: auto;
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        p{
+            @include parrafos
+        }
+        img{
+            width: 400px;
+            margin: auto;
+        }
+    }
+}
+
+}

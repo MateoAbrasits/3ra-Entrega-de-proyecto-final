@@ -1,0 +1,230 @@
+
+    
+    
+    #desplazar{
+        display: none;
+        
+         &:checked ~ .submenu{
+            height: 185px;
+            transition: 0.75s;
+            }
+
+
+    
+        
+        
+    }
+
+    
+    
+    .submenu{
+        text-decoration: none;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.75s;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    
+    }
+    
+    .imgMenuH{
+        display: none;
+    }
+    
+    .contMenu{
+        font-family: 'Staatliches', cursive;
+        position: fixed;
+        top: 0%;
+        float: left;
+        width:200px;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        transform:translateX(-190px);
+        transition: 1s;
+        border-right: solid rgb(29, 29, 29) 10px;
+        border-bottom: 0px;
+        z-index: 3;
+        
+    
+        &:hover{
+            transform:translateX(0);
+            transition: 1s;
+        }
+    
+    
+        .contMenuHamburguesa{
+            width: 180px;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+    
+            h2{
+                font-size: 2.6rem;
+                margin-bottom: 40px;
+                margin-top: 40px;
+                text-align: center;
+                color: white;
+                
+                
+            }
+
+            .menuPadre{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+            
+            }
+        
+            
+        }
+        
+    
+        li{
+            list-style: none;
+            font-size: 30px;
+            margin: 10px;
+            transition: 0.75s;
+
+            
+    
+            
+    
+            
+    
+            a{
+                font-size: 20px;
+                text-decoration: none;
+                color: white;
+                display: block;
+                
+                
+                
+    
+        
+              
+                
+            }
+
+            
+    
+            ul{
+                li{
+    
+                    display: flex;
+                    align-items: flex-start;
+    
+                    
+                    .hijosubmenu{
+                        font-size:17px;
+                        overflow: hidden;
+                        display: block;
+                        padding: 10px;
+                        width: 150px;
+    
+                        &:hover{
+                            background-color:rgb(41, 41, 41); 
+                        }
+                       
+                    }
+                }
+            }
+    
+        }
+    
+        .itemMenu{
+            transition: 0.75s;
+            display: block;
+            padding: 10px;
+
+            
+            
+    
+           
+      
+    
+        
+        
+        &:hover{
+            background-color: rgb(41, 41, 41);
+            transition: 0.75s;
+
+
+            
+        }
+
+        
+
+    }
+
+
+    .contDesplazar{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    
+    }
+
+    @media only screen and (max-width: 480px) {
+
+        
+       .contMenuFP{
+           z-index: 5;
+           position: fixed;
+           top: 0px;
+            width: 100%;   
+            background-color:rgb(1, 127, 177);;
+            display: flex;
+            flex-direction: row-reverse;
+            
+        .imgMenuH{
+            display: block;
+            width: 40px;
+            height: 40px;
+            border: solid 2px;
+            border-radius: 10%;
+            margin:5px ;
+            padding: 5px;
+
+
+   
+        }
+
+       }
+
+       
+
+       .contMenuFP:hover ~ .contMenu{
+        transform: translate(0px);
+        
+
+    }
+
+    
+    .contMenu{
+        transform: translate(-200px);
+        z-index: 5;
+    }
+
+
+main{
+    transform: translateY(50px);
+}
+
+    
+}
+    
+
+
+
+
+
+    

@@ -1,0 +1,119 @@
+
+
+
+main{
+    .contenedor-titulo{
+        margin: auto;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(0, 154, 201);
+        
+        h1{
+            -webkit-text-stroke: 2px rgb(0, 98, 128);
+            margin: auto;
+            text-align: center;
+            font-size: 35px;
+            color: black;
+            font-family: 'Mochiy Pop P One', sans-serif;
+            
+            
+        }
+
+    }
+
+    .artistas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 550px;
+            
+
+            a{
+
+                margin: 30px;
+                font-size: 30px;
+                color: black;
+                text-decoration: none;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+                transition: 1s;
+
+                &:hover{
+                    transform: scale(1.15);
+                        transition: 1s ;
+                        color: rgb(29, 29, 255);
+                }
+
+                img{
+                    width: 550px;
+                    height: 350px;
+                    margin-top: 40px;
+                    border: black solid 5px;
+                    border-radius: 10%;
+                    transition: 0.5s;
+    
+                    &:hover{
+                        transform: scale(1);
+                        transition: 1s ;
+                        
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+}
+
+.indexfooter{
+    
+    h2{
+        padding: 30px;
+        color: white;
+        text-align: center;
+        background-color: black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+
+    .indexfooter{
+        margin-top: 50px;
+    }
+
+    main{
+        overflow: hidden;
+        .contenedor-titulo{
+           height: 210px;
+            h1{
+                width: 400px;
+                font-size: 30px;
+            }
+    
+        }
+    
+    }
+    
+    
+    .artistas{
+        div{
+            width: 100%;
+            a{
+                .imgBanda{
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
