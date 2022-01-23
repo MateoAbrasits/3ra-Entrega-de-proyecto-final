@@ -1,0 +1,574 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  background: linear-gradient(to right, #353535, grey, #b9b9b9); }
+
+#desplazar {
+  display: none; }
+  #desplazar:checked ~ .submenu {
+    height: 185px;
+    transition: 0.75s; }
+
+.submenu {
+  text-decoration: none;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.75s;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column; }
+
+.contMenuFP .imgMenuH {
+  display: none; }
+
+.contMenu {
+  font-family: 'Staatliches', cursive;
+  position: fixed;
+  top: 0%;
+  float: left;
+  width: 250px;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  transform: translateX(-190px);
+  transition: 1s;
+  border-right: solid white 5px;
+  border-bottom: 0px;
+  z-index: 3; }
+  .contMenu:hover {
+    transform: translateX(0);
+    transition: 1s; }
+  .contMenu .contMenuHamburguesa {
+    width: 100%;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end; }
+    .contMenu .contMenuHamburguesa h2 {
+      font-size: 2.6rem;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      text-align: center;
+      color: white;
+      margin-right: 50px; }
+    .contMenu .contMenuHamburguesa .imgMenuH2 {
+      width: 40px;
+      height: 40px;
+      margin: 7px; }
+    .contMenu .contMenuHamburguesa .menuPadre {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column; }
+  .contMenu li {
+    list-style: none;
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.75s; }
+    .contMenu li a {
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+      display: block; }
+    .contMenu li ul li {
+      display: flex;
+      align-items: flex-start; }
+      .contMenu li ul li .hijosubmenu {
+        font-size: 17px;
+        overflow: hidden;
+        display: block;
+        padding: 10px;
+        width: 150px; }
+        .contMenu li ul li .hijosubmenu:hover {
+          background-color: #292929; }
+  .contMenu .itemMenu {
+    transition: 0.75s;
+    display: block;
+    padding: 10px; }
+    .contMenu .itemMenu:hover {
+      background-color: #292929;
+      transition: 0.75s; }
+  .contMenu .contDesplazar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start; }
+
+@media only screen and (max-width: 1000px) {
+  .imgMenuH {
+    display: none; }
+  .contMenuFP {
+    z-index: 5;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row-reverse; }
+    .contMenuFP .imgMenuH {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      padding: 5px; }
+  .contMenuFP:hover ~ .contMenu {
+    transform: translate(0px); }
+  .contMenu {
+    transform: translate(-200px);
+    z-index: 5; }
+  .contMenu {
+    width: 200px; }
+  .contMenuHamburguesa {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+    .contMenuHamburguesa .imgMenuH2 {
+      display: none; }
+    .contMenuHamburguesa h2 {
+      margin-right: auto; } }
+
+main .contenedor-titulo {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: #009ac9;
+  padding-bottom: 10px; }
+  main .contenedor-titulo h1 {
+    width: 80%;
+    -webkit-text-stroke: 2px #006280;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+
+main .artistas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  main .artistas div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 550px; }
+    main .artistas div a {
+      margin: 30px;
+      font-size: 30px;
+      color: black;
+      text-decoration: none;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-weight: bold;
+      transition: 1s; }
+      main .artistas div a:hover {
+        transform: scale(1.15);
+        transition: 1s;
+        color: #1d1dff; }
+      main .artistas div a img {
+        width: 550px;
+        height: 350px;
+        margin-top: 40px;
+        border: black solid 5px;
+        border-radius: 10%;
+        transition: 0.5s; }
+        main .artistas div a img:hover {
+          transform: scale(1);
+          transition: 1s; }
+
+.indexfooter h2 {
+  padding: 30px;
+  color: white;
+  text-align: center;
+  background-color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+
+@media only screen and (max-width: 1000px) {
+  .indexfooter {
+    margin-top: 50px; }
+  main {
+    overflow: hidden; }
+    main .contenedor-titulo {
+      height: auto; }
+      main .contenedor-titulo h1 {
+        margin-top: 50px;
+        padding-bottom: 10px; }
+    main .artistas div {
+      width: 90%; }
+      main .artistas div a .imgBanda {
+        width: 90%;
+        height: auto; } }
+
+.contSetItOff .titulo {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: #009ac9;
+  margin-bottom: 70px; }
+  .contSetItOff .titulo h1 {
+    -webkit-text-stroke: 2px #006280;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+
+.comoBanda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px; }
+  .comoBanda .div-comoBanda {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    flex-direction: row; }
+    .comoBanda .div-comoBanda img {
+      width: 400px; }
+    .comoBanda .div-comoBanda p {
+      text-align: left;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 20px; }
+  .comoBanda h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+
+.historia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px; }
+  .historia h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+  .historia .div-historia {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 85%; }
+    .historia .div-historia img {
+      margin-top: 30px;
+      width: 400px;
+      height: 320px;
+      margin: auto; }
+    .historia .div-historia p {
+      text-align: left;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 20px; }
+
+.influencias {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; }
+  .influencias h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+  .influencias .div-influencias {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    flex-direction: row; }
+    .influencias .div-influencias p {
+      text-align: left;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 20px; }
+    .influencias .div-influencias img {
+      width: 400px; }
+
+footer .titulofooter h3 {
+  color: white;
+  background-color: transparent; }
+
+footer .contLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  footer .contLogos img {
+    margin: 10px; }
+
+@media screen and (max-width: 1000px) {
+  .contSetItOff .titulo {
+    width: auto; }
+    .contSetItOff .titulo h1 {
+      margin-top: 50px;
+      padding: 10px; }
+  .comoBanda .div-comoBanda {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .comoBanda .div-comoBanda img {
+      margin: 10px;
+      width: 40%;
+      height: auto; }
+  .historia .div-historia {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .historia .div-historia img {
+      margin: auto;
+      width: 40%;
+      height: auto; }
+    .historia .div-historia p {
+      margin-top: 30px; }
+  .influencias .div-influencias {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .influencias .div-influencias p {
+      text-align: left;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 20px; }
+    .influencias .div-influencias img {
+      width: 40%;
+      height: auto;
+      margin: 10px; } }
+
+.contRoyal .titulo {
+  margin: auto;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #009ac9;
+  margin-bottom: 70px; }
+  .contRoyal .titulo h1 {
+    -webkit-text-stroke: 2px #006280;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+
+.comoBanda {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; }
+  .comoBanda div {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    flex-direction: row; }
+    .comoBanda div img {
+      width: 400px; }
+    .comoBanda div p {
+      text-align: left;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 20px; }
+  .comoBanda h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+
+.historia {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; }
+  .historia h2 {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+  .historia div {
+    margin: auto;
+    width: 85%;
+    display: flex;
+    flex-direction: row; }
+    .historia div img {
+      margin-top: 30px;
+      width: 420px;
+      height: 320px; }
+    .historia div p {
+      text-align: left;
+      font-size: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 20px; }
+
+footer .titulofooter {
+  background-color: transparent; }
+  footer .titulofooter h3 {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+
+footer .contLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  footer .contLogos a .logoYout {
+    width: 100px; }
+  footer .contLogos a .logoFac {
+    width: 60px; }
+  footer .contLogos a .logoInst {
+    width: 45px; }
+  footer .contLogos a .logoTw {
+    width: 45px; }
+
+@media screen and (max-width: 1000px) {
+  .contRoyal .titulo {
+    width: auto;
+    height: auto; }
+    .contRoyal .titulo h1 {
+      margin-top: 50px;
+      padding: 10px; }
+  .comoBanda div {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .comoBanda div img {
+      width: 90%;
+      height: auto;
+      margin: auto; }
+  .historia div {
+    width: 100%;
+    flex-direction: column; }
+    .historia div img {
+      margin: auto;
+      height: auto;
+      width: 90%; }
+    .historia div p {
+      margin-top: 30px; }
+  .royalfooter {
+    width: 100%; }
+    .royalfooter .titulofooter {
+      width: 100%; }
+      .royalfooter .titulofooter h3 {
+        text-align: center; }
+    .royalfooter .contLogos {
+      overflow: hidden;
+      width: 100%; }
+      .royalfooter .contLogos a img {
+        margin: 5px; } }
+
+.InfoTitulo {
+  margin: auto;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: #009ac9;
+  margin-bottom: 70px; }
+  .InfoTitulo h1 {
+    -webkit-text-stroke: 2px #006280;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    font-family: 'Mochiy Pop P One', sans-serif; }
+
+.parrafoInfo {
+  width: 85%;
+  margin: auto; }
+  .parrafoInfo h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; }
+
+.contenido .contenido-video {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .contenido .contenido-video h2 {
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline; }
+  .contenido .contenido-video iframe {
+    width: 800px;
+    margin-top: 30px;
+    margin-bottom: 60px; }
+
+.contenido .contenido-textoconBorde {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px; }
+  .contenido .contenido-textoconBorde h2 {
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 20px; }
+  .contenido .contenido-textoconBorde a {
+    text-align: center;
+    -webkit-text-stroke: 2px blue;
+    color: transparent;
+    font-size: 60px;
+    text-decoration: none; }
+
+.footer {
+  height: 100px;
+  background-color: black; }
+
+@media screen and (max-width: 1000px) {
+  .InfoTitulo {
+    height: auto; }
+    .InfoTitulo h1 {
+      margin-top: 50px;
+      padding-bottom: 10px; }
+  .parrafoInfo {
+    width: 90%; }
+    .parrafoInfo h2 {
+      margin: auto;
+      width: auto;
+      text-align: center; }
+  .contenido .contenido-video {
+    width: 90%;
+    margin-top: 60px; }
+    .contenido .contenido-video h2 {
+      width: auto;
+      margin: auto; }
+    .contenido .contenido-video iframe {
+      width: 80%;
+      height: auto;
+      margin-top: 30px;
+      margin-bottom: 60px;
+      margin: auto; } }
+
+.formBootstrap {
+  color: black;
+  font-weight: bold; }
+
+.container {
+  margin-bottom: 100px; }
+
+.contacto-footer {
+  background-color: black;
+  height: 60px; }
